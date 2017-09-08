@@ -43,7 +43,7 @@ public class RegenAllRoads extends SubCommand {
         PlotArea area = PS.get().getPlotAreaByString(args[0]);
         if (area == null || !WorldUtil.IMP.isWorld(area.worldname)) {
             C.NOT_VALID_PLOT_WORLD.send(player, args[0]);
-            return false;
+            // return false; - TO WORK WITH IslandPlots >.<
         }
         String name = args[0];
         PlotManager manager = area.getPlotManager();
